@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>跳转中....</title>
+    <script language="javascript">
+        function submit(data) {
+		setData(data);
+		document.getElementById('actionUrl').submit();
+        }
+		
+		function setData(data){
+		   document.getElementById('userName').value =data.UserName;
+            document.getElementById('userId').value =data.UserId;
+            document.getElementById('token').value =data.Token;
+            document.getElementById('age').value =data.Age;
+            document.getElementById('actionUrl').action =data.ActionUrl;
+		}
+
+    </script>
+</head>
+<body>
+<form action="" method="post" id="actionUrl">
+    <input type="hidden" name="userName" id="userName" value=""/>
+    <input type="hidden" name="userId" id="userId" value=""/>
+    <input type="hidden" name="token" id="token" value=""/>
+    <input type="hidden" name="age" id="age" value="">
+</form>
+</body>
+</html>
